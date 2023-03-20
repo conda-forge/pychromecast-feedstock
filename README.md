@@ -1,11 +1,11 @@
-About pychromecast
-==================
+About pychromecast-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pychromecast-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/balloob/pychromecast
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pychromecast-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python module to talk to Google Chromecast.
 
