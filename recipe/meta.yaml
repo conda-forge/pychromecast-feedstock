@@ -1,5 +1,5 @@
 {% set name = "pychromecast" %}
-{% set version = "13.0.7" %}
+{% set version = "13.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyChromecast-{{ version }}.tar.gz
-  sha256: 0de98e9e5be43269dd41efb16126ab0d5ba941ca4acae024329712851c0c0324
+  sha256: e4b7523db137f8de05eedcc6154113b68532848629442b448c2334fac966a447
 
 build:
   noarch: python
