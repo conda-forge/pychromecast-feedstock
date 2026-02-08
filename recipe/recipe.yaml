@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  name: pychromecast
+  version: 13.1.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/PyChromecast-${{ version }}.tar.gz
+  sha256: 08e61a8b54bd2119d3c9ab1ec0136d3d8563aa97e0a3b57841588b9be60c2676
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - protobuf >=3.19.1,<4
+    - zeroconf >=0.25.1
+    - casttube >=0.2.0
+
+tests:
+  - python:
+      imports:
+        - pychromecast
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Python module to talk to Google Chromecast.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/balloob/pychromecast
+
+extra:
+  recipe-maintainers:
+    - pavelzw
