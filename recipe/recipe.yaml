@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: pychromecast
-  version: 13.1.0
+  version: "14.0.10"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/PyChromecast-${{ version }}.tar.gz
-  sha256: 08e61a8b54bd2119d3c9ab1ec0136d3d8563aa97e0a3b57841588b9be60c2676
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: f05a1c8d727d4f104c8c731688053033e05157f2ab81bc8eef50ec0c62f9373c
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
