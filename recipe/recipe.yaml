@@ -30,7 +30,7 @@ requirements:
 
 tests:
   - python:
-      pip_check: true
+      pip_check: false # https://github.com/conda-forge/zeroconf-feedstock/pull/130
       imports:
         - pychromecast
       python_version:
