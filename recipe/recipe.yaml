@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "14.0.10"
+  version: "14.1.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pychromecast/pychromecast-${{ version }}.tar.gz
-  sha256: f05a1c8d727d4f104c8c731688053033e05157f2ab81bc8eef50ec0c62f9373c
+  sha256: 17f672c5ccf8aa3ccb6ba261e51d60224d28efcc0f225c8d2ec0509eeda52efd
 
 build:
   number: 0
